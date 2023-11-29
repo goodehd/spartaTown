@@ -11,10 +11,10 @@ public class ParticipantList : MonoBehaviour
 
     public void SetListNames() {
         GameObject name = Managers.Resource.Instantiate("ParticipantName", content.transform);
-        GameObject player = GameManager.player;
+        GameObject player = Managers.GameManager.player;
         name.GetComponent<TextMeshProUGUI>().text = player.GetComponent<PlayerScript>().GetName();
 
-        List<GameObject> gameObjects = GameManager.Instance.gameObjects;
+        List<GameObject> gameObjects = Managers.GameManager.GameObjects;
         for(int i = 0; i < gameObjects.Count; ++i) {
             GameObject npcName = Managers.Resource.Instantiate("ParticipantName", content.transform);
             npcName.GetComponent<TextMeshProUGUI>().text = gameObjects[i].GetComponent<NPC>().npcName;

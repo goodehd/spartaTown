@@ -10,8 +10,8 @@ public class NPC : MonoBehaviour
     [SerializeField] private GameObject textUI;
     public string npcName;
 
-    private void Awake() {
-        GameManager.Instance.gameObjects.Add(this.gameObject);
+    private void Start() {
+        Managers.GameManager.GameObjects.Add(this.gameObject);
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
@@ -23,7 +23,7 @@ public class NPC : MonoBehaviour
     }
 
     public void ClickBell() {
-        GameManager.Instance.PlayerKeyRock = true;
+        Managers.GameManager.PlayerKeyRock = true;
         Managers.Resource.CreateConversation("ºÎ¸£¼Ì³ª¿ä?ºÎ¸£¼Ì³ª¿ä?ºÎ¸£¼Ì³ª¿ä?ºÎ¸£¼Ì³ª¿ä?ºÎ¸£¼Ì³ª¿ä?ºÎ¸£¼Ì³ª¿ä?" +
             "ºÎ¸£¼Ì³ª¿ä?ºÎ¸£¼Ì³ª¿ä?ºÎ¸£¼Ì³ª¿ä?ºÎ¸£¼Ì³ª¿ä?ºÎ¸£¼Ì³ª¿ä?ºÎ¸£¼Ì³ª¿ä?ºÎ¸£¼Ì³ª¿ä?ºÎ¸£¼Ì³ª¿ä?" +
             "ºÎ¸£¼Ì³ª¿ä?ºÎ¸£¼Ì³ª¿ä?ºÎ¸£¼Ì³ª¿ä?ºÎ¸£¼Ì");

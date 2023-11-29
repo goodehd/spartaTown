@@ -24,7 +24,7 @@ public class ChangeName : MonoBehaviour
         if (Length < 2 || Length > 10)
             return;
 
-        GameObject player = GameManager.player;
+        GameObject player = Managers.GameManager.player;
         PlayerScript playerScript = player.GetComponent<PlayerScript>();
         playerScript.ChangeName(nameInputField.text);
         playerScript.ChangeCharacter(characterName);
@@ -32,7 +32,7 @@ public class ChangeName : MonoBehaviour
         root.SetActive(false);
         inGameBtn.SetActive(true);
         blruImage.gameObject.SetActive(false);
-        GameManager.Instance.PlayerKeyRock = false;
+        Managers.GameManager.PlayerKeyRock = false;
     }
 
     public void SetCharacterName(SelectCharacter.CharacterName name) {

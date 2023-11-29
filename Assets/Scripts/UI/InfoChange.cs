@@ -7,8 +7,8 @@ public class InfoChange : MonoBehaviour
     [SerializeField] private GameObject root;
 
     public void ChangeClick() {
-        bool rock = GameManager.Instance.PlayerKeyRock;
+        bool rock = Managers.GameManager.PlayerKeyRock;
         root.SetActive(root.activeSelf ? false : true);
-        GameManager.Instance.PlayerKeyRock = root.activeSelf ? true : false;
+        Managers.GameManager.PlayerKeyRock = root.activeSelf ? true : false;
     }
 }

@@ -12,7 +12,7 @@ public class Conversation : MonoBehaviour
     }
 
     public void UIClick() {
-        GameManager.Instance.PlayerKeyRock = false;
+        Managers.GameManager.PlayerKeyRock = false;
         Destroy(this.gameObject);
     }
 }

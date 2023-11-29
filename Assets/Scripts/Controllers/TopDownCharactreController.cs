@@ -28,21 +28,21 @@ public class TopDownCharactreController : MonoBehaviour
     }
 
     public void CallMoveEvent(Vector2 direction) {
-        if (GameManager.Instance.PlayerKeyRock)
+        if (Managers.GameManager.PlayerKeyRock)
             return;
 
         OnMoveEvent?.Invoke(direction);
     }
 
     public void CallLookEvent(Vector2 direction) {
-        if (GameManager.Instance.PlayerKeyRock)
+        if (Managers.GameManager.PlayerKeyRock)
             return;
 
         OnLookEvent?.Invoke(direction);
     }
 
     public void CallAttackEvent() {
-        if (GameManager.Instance.PlayerKeyRock)
+        if (Managers.GameManager.PlayerKeyRock)
             return;
 
         OnAttackEvent?.Invoke();
